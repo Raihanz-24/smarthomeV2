@@ -1,9 +1,16 @@
-
 {
-  "name": "Relay Controller",
-  "short_name": "RelayCtrl",
-  "start_url": "index.html",
+  "name": "Smart Home by Reyhan",
+  "short_name": "Smart Home",
+  "description": "Aplikasi kontrol relay menggunakan PWA.",
+  "start_url": "/smarthomeV2/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#000000"
+  "theme_color": "#3498db",
+  "icons": [
+      {
+          "src": "images/logo.png",
+          "sizes": "192x192",
+          "type": "image/png"
+      }
+  ]
 }

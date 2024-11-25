@@ -1,16 +1,25 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Relay Controller</title>
-  <link rel="manifest" href="manifest.json">
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home - Relay Control</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Relay Controller</h1>
-  <button id="relayOn">ON</button>
-  <button id="relayOff">OFF</button>
+    <h1>Kontrol 8 Channel Relay</h1>
+
+    <div id="relayControls">
+        <button id="relay1" class="relay-btn" onclick="toggleRelay(1)">Relay 1 - OFF</button>
+        <button id="relay2" class="relay-btn" onclick="toggleRelay(2)">Relay 2 - OFF</button>
+        <button id="relay3" class="relay-btn" onclick="toggleRelay(3)">Relay 3 - OFF</button>
+        <button id="relay4" class="relay-btn" onclick="toggleRelay(4)">Relay 4 - OFF</button>
+        <button id="relay5" class="relay-btn" onclick="toggleRelay(5)">Relay 5 - OFF</button>
+        <button id="relay6" class="relay-btn" onclick="toggleRelay(6)">Relay 6 - OFF</button>
+        <button id="relay7" class="relay-btn" onclick="toggleRelay(7)">Relay 7 - OFF</button>
+        <button id="relay8" class="relay-btn" onclick="toggleRelay(8)">Relay 8 - OFF</button>
+    </div>
+
+    <script src="js/app.js"></script>
 </body>
 </html>
