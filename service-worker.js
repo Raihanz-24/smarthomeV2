@@ -1,16 +1,12 @@
-
-self.addEventListener('install', (event) => {
+// service-worker.js
+self.addEventListener('push', function(event) {
+  var options = {
+      body: event.data.text(),
+      icon: 'icon.png',
+      badge: 'badge.png'
+  };
+  
   event.waitUntil(
-    caches.open('static-cache').then((cache) => {
-      return cache.addAll(['index.html', 'script.js', 'manifest.json']);
-    })
-  );
-});
-
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request).then((response) => {
-      return response || fetch(event.request);
-    })
+      self.registration.showNotification('New Update Available', options)
   );
 });
