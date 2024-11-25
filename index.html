@@ -19,8 +19,21 @@
         <button id="relay6" class="relay-btn" onclick="toggleRelay(6)">Relay 6 - OFF</button>
         <button id="relay7" class="relay-btn" onclick="toggleRelay(7)">Relay 7 - OFF</button>
         <button id="relay8" class="relay-btn" onclick="toggleRelay(8)">Relay 8 - OFF</button>
+
+        <button id="install-button" style="display:none;">Install PWA</button>
+
     </div>
 
     <script src="js/app.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+          console.log('Service Worker registered with scope:', registration.scope);
+        }).catch(function(error) {
+          console.log('Service Worker registration failed:', error);
+        });
+      }
+    </script>
+    
 </body>
 </html>
